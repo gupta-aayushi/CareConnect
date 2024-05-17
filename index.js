@@ -1,4 +1,4 @@
-
+let 
 let menu = document.querySelector('#menu-btn');
 let navbar =document.querySelector('.header .nav');
 let header=document.querySelector('.header');
@@ -19,4 +19,11 @@ window.onscroll=() =>{
         header.classList.remove('active');
     }
 }
-
+document.addEventListener('DOMContentLoaded', (event) => {
+    const form = document.querySelector('.contact form');
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        alert('Appointment successfully made!');
+        form.submit();
+    });
+});
